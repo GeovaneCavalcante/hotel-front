@@ -1,0 +1,68 @@
+<div *ngIf="formData == 0">
+  <div class="ui-g " style="width: 100%">
+    <div class="ui-g-5">
+      <h1>Ofertas</h1>
+      <p style='font-weight:bold;'> Veja algumas das promoções</p>
+    </div>
+  </div>
+  <br>
+  <div class="ui-g " style="width: 100%">
+    <div class="ui-g-12 ui-md-6" *ngFor="let hotel of hoteis">
+      <p-card header="{{hotel.title}}" subheader="Descrição"
+        styleClass="ui-card-shadow">
+        <p-header>
+          <img src="Card" style="width:'100%'; height: 250px;" src="{{hotel.img_url}}">
+        </p-header>
+        <div style="text-align: justify;">
+          <p style="text-align: center;"><strong>Preço diária: {{hotel.price | currency:'BRL'}}</strong></p>
+          <p style="text-align: center;"><strong>Disponibilidade: {{hotel.startDateAvailable | date:'dd/MM/yyyy'}} a {{hotel.endDateAvailable | date:'dd/MM/yyyy'}}</strong></p>
+          <br>
+          <p>{{hotel.description}}</p>
+        </div>
+        <p-footer>
+
+        </p-footer>
+      </p-card>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="hoteis.length && formData != 0">
+  <div class="ui-g " style="width: 100%">
+    <div class="ui-g-5">
+      <h1>{{formData.title}}</h1>
+      <p style='font-weight:bold;'> {{formData.title}}: {{hoteis.length}} propriedades encontradas</p>
+    </div>
+  </div>
+  <br>
+  <div class="ui-g " style="width: 100%">
+    <div class="ui-g-12 ui-md-6" *ngFor="let hotel of hoteis">
+      <p-card header="{{hotel.title}}" subheader="Descrição"
+        styleClass="ui-card-shadow">
+        <p-header>
+          <img src="Card" style="width:'100%'; height: 250px;" src="{{hotel.img_url}}">
+        </p-header>
+        <div style="text-align: justify;">
+          <p style="text-align: center;"><strong>Preço diária: {{hotel.price | currency:'BRL'}}</strong></p>
+          <p style="text-align: center;"><strong>Disponibilidade: {{hotel.startDateAvailable | date:'dd/MM/yyyy'}} a {{hotel.endDateAvailable | date:'dd/MM/yyyy'}}</strong></p>
+          <br>
+          <p>{{hotel.description}}</p>
+        </div>
+        <p-footer>
+          <button pButton type="button" label="Fazer Reserva" (click)="addReserve(hotel)" icon="pi pi-check"
+            style="margin-right: .25em"></button>
+        </p-footer>
+      </p-card>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!hoteis.length">
+  <div class="ui-g " style="width: 100%;">
+    <div class="ui-g-12" style="text-align: center">
+      <h1>Desulpe, nada encontrado</h1>
+      <h2 style='font-weight:bold;'> Para: "{{formData.title}}", no período de
+        {{formData.dateCheckIn | date:'dd/MM/yyyy'}} a {{formData.dateCheckOut | date:'dd/MM/yyyy'}}</h2>
+    </div>
+  </div>
+  <div>

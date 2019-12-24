@@ -1,0 +1,32 @@
+{
+  "hoteis": [
+    {
+      "id": 1,
+      "title": "Hotel Transilvânia",
+      "description": "Venha curtir suas férias com  a gente, conheça nossos serviços de hospedagem, e curta um ambiente agradável para suas férias.",
+      "img_url": "https://q-cf.bstatic.com/images/hotel/max1280x900/468/46842895.jpg",
+      "price": 5454
+    },
+    {
+      "id": 1,
+      "title": "Hotel California",
+      "description": "Venha curtir suas férias com  a gente, conheça nossos serviços de hospedagem, e curta um ambiente agradável para suas férias.",
+      "img_url": "https://r-fa.bstatic.com/xdata/images/xphoto/max1280x900/33757934.jpg?k=605bd69d6445126f72799e4a7d8cab7001c2ab4a1938e6d1ef59c31a3c53be82&o=",
+      "price": 6565
+    },
+    {
+      "id": 1,
+      "title": "Hotel Brasil Tropical",
+      "description": "Venha curtir suas férias com  a gente, conheça nossos serviços de hospedagem, e curta um ambiente agradável para suas férias.",
+      "img_url": "https://www.hotelportofuturo.com.br/wp-content/uploads/2017/10/area-de-lazer-piscina-adultos.jpg",
+      "price": 9745
+    },
+    {
+      "id": 1,
+      "title": "Hotel Cidade Nova",
+      "description": "Venha curtir suas férias com  a gente, conheça nossos serviços de hospedagem, e curta um ambiente agradável para suas férias.",
+      "img_url": "https://st2.depositphotos.com/1875497/9916/i/950/depositphotos_99160110-stock-photo-umbrellas-and-chairs-around-hotel.jpg",
+      "price": 6845
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<h1 style="text-align:center" >Reservas</h1>
+<p-table [value]="reservations">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nome do Hotel</th>
+            <th>Data de Entrada</th>
+            <th>Data de Saída</th>
+            <th>Valor total</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-reserve>
+        <tr style="text-align:center">
+            <td>{{reserve.hotel.title}}</td>
+            <td>{{reserve.startDateAvailable | date:'dd/MM/yyyy'}}</td>
+            <td>{{reserve.endDateAvailable | date:'dd/MM/yyyy'}}</td>
+            <td>{{reserve.value | currency:'BRL'}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+<br>
+<p-button routerLink='/' label="Voltar" ></p-button>

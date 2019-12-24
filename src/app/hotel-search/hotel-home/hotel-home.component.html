@@ -1,0 +1,8 @@
+<div>
+  <div class="ui-g " style="width: 100%">
+    <div class="ui-g-12">
+      <app-find (sendHoteis)="reciverHoteis($event)"></app-find>
+    </div>
+  </div>
+  <app-hotel-list [hoteis]="hoteis" [formData]="formData"></app-hotel-list>
+</div>
