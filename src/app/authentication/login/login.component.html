@@ -1,5 +1,6 @@
 <div class="limiter">
-  <div class="container-login100">
+<div class="ui-g">
+  <div class="container-login100" >
     <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
       <form [formGroup]="loginForm" class="login100-form validate-form">
         <span class="login100-form-title p-b-33">
@@ -8,6 +9,7 @@
         <div *ngIf="!loginForm.valid && (loginForm.dirty || !loginForm.untouched)" style="color: red">
           <h5>Preencha todos os campos</h5>
         </div>
+        {{error}}
         <div *ngIf="error" style="color: red">
           <h4>{{ error }}</h4>
         </div>

@@ -5,7 +5,7 @@ export class ReserveModel {
     dateCheckIn: string;
     dateCheckOut: string;
     startDateAvailable: string;
-    endDateAvailable: string
+    endDateAvailable: string;
     price: number;
 
     constructor(

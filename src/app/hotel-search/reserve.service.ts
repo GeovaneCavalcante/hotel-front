@@ -27,7 +27,7 @@ export class ReserveService {
 
   getReservations() {
 
-    let user = JSON.parse(localStorage.getItem("user"));
+    let user = JSON.parse(localStorage.getItem('user'));
 
     return this.httpClient.get(config.apiUrl + '/api/reservations/user/' + user.id, { 'headers': { 'Authorization': 'Bearer ' + localStorage.getItem('token') } });
   }

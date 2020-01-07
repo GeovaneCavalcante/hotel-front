@@ -41,8 +41,7 @@ export class LoginComponent implements OnInit {
       })
       .catch(res => {
         this.error = 'Usuário inválido';
-
-        console.log(res);
+        this.router.navigate(['/login']);
       });
   }
 

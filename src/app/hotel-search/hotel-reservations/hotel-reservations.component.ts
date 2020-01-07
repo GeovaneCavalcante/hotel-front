@@ -19,10 +19,10 @@ export class HotelReservationsComponent implements OnInit {
     .then(res => {
       this.reservations = res;
     })
-    .catch(err =>{
-      console.log(err)
-    })
-   
+    .catch(err => {
+      console.log(err);
+    });
+
   }
 
 }

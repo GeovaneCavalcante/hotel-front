@@ -9,8 +9,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class HotelHomeComponent implements OnInit {
 
   @Output() receiveHotel = new EventEmitter();
-  hoteis: Object[] = [];
-  formData: Object[] = [];
+  hoteis: object[] = [];
+  formData: object[] = [];
   constructor() { }
 
   reciverHoteis(hoteis) {

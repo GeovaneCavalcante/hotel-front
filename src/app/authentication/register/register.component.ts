@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  error: String;
+  error: string;
 
   registerForm = new FormGroup({
     email: new FormControl('', Validators.required),
@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
 
-    let valide = this.validate();
+    const valide = this.validate();
     if (valide) {
       this.error = valide;
       return true;
@@ -35,24 +35,22 @@ export class RegisterComponent implements OnInit {
     this.authService.register(this.registerForm.value)
       .toPromise()
       .then(res => {
-        console.log(res)
         this.router.navigate(['/login']);
       })
       .catch(res => {
-        console.log(res);
-        if (typeof res.error == 'object'){
+        if (typeof res.error === 'object') {
           this.error = res.error.errors[0].defaultMessage;
-        }else{
+        } else {
           this.error = res.error;
         }
 
-      })
+      });
   }
 
   validate() {
 
-    if (this.registerForm.value.password != this.registerForm.value.passwordConfirme) {
-      return "Senhas diferentes!";
+    if (this.registerForm.value.password !== this.registerForm.value.passwordConfirme) {
+      return 'Senhas diferentes!';
     } else {
       return false;
     }
